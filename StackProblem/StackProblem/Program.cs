@@ -11,12 +11,16 @@ namespace StackProblem
             do
             {
                 Console.WriteLine("\n1:Adding the char item in Stack");
+                Console.WriteLine("2:Remove the char from Stack");
                 Console.WriteLine("0:Exit");
                 input = int.Parse(Console.ReadLine());
                 switch (input)
                 {
                     case 1:
                         StackExample.InsertChar();
+                        break;
+                    case 2:
+                        StackExample.RemoveChar();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
