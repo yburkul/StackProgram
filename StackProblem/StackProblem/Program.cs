@@ -15,6 +15,7 @@ namespace StackProblem
                 Console.WriteLine("2:Remove the char from Stack");
                 Console.WriteLine("3:Show Top Most Element of Stack");
                 Console.WriteLine("4:Checking whether the element is present in the Stack or not");
+                Console.WriteLine("5:Removing all the elements from Stack");
                 Console.WriteLine("0:Exit");
                 input = int.Parse(Console.ReadLine());
                 switch (input)
@@ -30,6 +31,9 @@ namespace StackProblem
                         break;
                     case 4:
                         StackExample.ContainsInStack();
+                        break;
+                    case 5:
+                        StackExample.ClearAllStack();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
