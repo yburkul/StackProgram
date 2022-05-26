@@ -54,8 +54,22 @@ namespace StackProblem
             {
                 Console.Write(c + " ");
             }
-            stack.Peek();
             Console.WriteLine("\nTop Most Element of Stack is: " + stack.Peek());
+        }
+        public static void ContainsInStack()
+        {
+            Stack<char> stack = new Stack<char>();
+            stack.Push('A');
+            stack.Push('B');
+            stack.Push('C');
+            stack.Push('D');
+            Console.WriteLine("Current stack: ");
+            foreach (char c in stack)
+            {
+                Console.Write(c + " ");
+            }            
+            Console.WriteLine("\nChecking whether the element is present in the Stack or not: " + stack.Contains('C'));
+            Console.WriteLine("\nChecking whether the element is present in the Stack or not: " + stack.Contains('Y'));
         }
     }
 }
