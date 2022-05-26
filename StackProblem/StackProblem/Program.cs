@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 
 namespace StackProblem
 {
@@ -12,6 +13,7 @@ namespace StackProblem
             {
                 Console.WriteLine("\n1:Adding the char item in Stack");
                 Console.WriteLine("2:Remove the char from Stack");
+                Console.WriteLine("3:Show Top Most Element of Stack");
                 Console.WriteLine("0:Exit");
                 input = int.Parse(Console.ReadLine());
                 switch (input)
@@ -21,6 +23,9 @@ namespace StackProblem
                         break;
                     case 2:
                         StackExample.RemoveChar();
+                        break;
+                    case 3:
+                        StackExample.DisplayTopChar();
                         break;
                     case 0:
                         Console.WriteLine("Exit");

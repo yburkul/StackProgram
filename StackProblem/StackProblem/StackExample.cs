@@ -35,12 +35,27 @@ namespace StackProblem
             {
                 Console.Write(c + " ");
             }
-            stack.Pop();
-            Console.WriteLine("\nAfter Removing Current stack are: ");
+            Console.WriteLine("\nTop Element: " + stack.Pop());
+            Console.WriteLine("\nAfter Removing Top element the Current stack are: ");
             foreach (char c in stack)
             {
                 Console.Write(c + " ");
             }
+        }
+        public static void DisplayTopChar()
+        {
+            Stack<char> stack = new Stack<char>();
+            stack.Push('A');
+            stack.Push('B');
+            stack.Push('C');
+            stack.Push('D');
+            Console.WriteLine("Current stack: ");
+            foreach (char c in stack)
+            {
+                Console.Write(c + " ");
+            }
+            stack.Peek();
+            Console.WriteLine("\nTop Most Element of Stack is: " + stack.Peek());
         }
     }
 }
