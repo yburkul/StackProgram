@@ -35,7 +35,7 @@ namespace StackProblem
             {
                 Console.Write(c + " ");
             }
-            Console.WriteLine("Count the stack element: " + stack.Count);
+            Console.WriteLine("\nCount the stack element: " + stack.Count);
             Console.WriteLine("\nTop Element: " + stack.Pop());
             Console.WriteLine("\nAfter Removing Top element the Current stack are: ");
             foreach (char c in stack)
@@ -70,8 +70,8 @@ namespace StackProblem
             {
                 Console.Write(c + " ");
             }            
-            Console.WriteLine("\nChecking whether the element is present in the Stack or not: " + stack.Contains('C'));
-            Console.WriteLine("\nChecking whether the element is present in the Stack or not: " + stack.Contains('Y'));
+            Console.WriteLine("\nChecking whether the 'C' element is present in the Stack or not: " + stack.Contains('C'));
+            Console.WriteLine("\nChecking whether the 'Y' element is present in the Stack or not: " + stack.Contains('Y'));
         }
         public static void ClearAllStack()
         {
@@ -88,6 +88,59 @@ namespace StackProblem
             Console.WriteLine("\nDisplaying the count of elements contained in the Stack Before removing all the elements: " + stack.Count);
             stack.Clear();
             Console.WriteLine("\nDisplaying the count of elements contained in the Stack after removing all the elements: " + stack.Count);
+        }
+
+        public static void InsertIntager()
+        {
+            Stack<int> stack = new Stack<int>();  
+            stack.Push(10);
+            stack.Push(20);
+            stack.Push(30);
+            stack.Push(40);
+            Console.WriteLine("Current stack are: ");
+            foreach (int item in stack)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine();
+            int input;
+            do
+            {
+                Console.WriteLine();
+                Console.WriteLine("Welcome in Stack Opertions");
+                Console.WriteLine("1: Remove Element from stack by using Pop Opertaion");
+                Console.WriteLine("2: Display Top Most Element by using Peek Opertaion");
+                Console.WriteLine("3: Checking whether the element is present in the Stack or not");
+                Console.WriteLine("4: Removing all the elements from Stack");
+                Console.WriteLine("0: Please Go Back In Main Method\n");
+                input = int.Parse(Console.ReadLine());
+                switch (input)
+                {
+                    case 1:
+                        Console.WriteLine("\nCount the stack element: " + stack.Count);
+                        Console.WriteLine("\nTop Element: " + stack.Pop());
+                        Console.WriteLine("\nCount the stack element after remove element: " + stack.Count);
+                        break;
+                    case 2:
+                        Console.WriteLine("\nTop Most Element of Stack is: " + stack.Peek());
+                        break;
+                    case 3:
+                        Console.WriteLine("\nChecking whether the '20' element is present in the Stack or not: " + stack.Contains(20));
+                        break;
+                    case 4:
+                        Console.WriteLine("\nDisplaying the count of elements contained in the Stack Before removing all the elements: " + stack.Count);
+                        stack.Clear();
+                        Console.WriteLine("\nDisplaying the count of elements contained in the Stack after removing all the elements: " + stack.Count);
+                        break;
+                    case 0:
+                        Console.WriteLine("Yes");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Input: ----- Please Enter Correct Input");
+                        break;
+                }
+            }
+            while (input != 0);
         }
     }
 }
