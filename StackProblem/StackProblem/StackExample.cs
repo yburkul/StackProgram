@@ -90,7 +90,7 @@ namespace StackProblem
             Console.WriteLine("\nDisplaying the count of elements contained in the Stack after removing all the elements: " + stack.Count);
         }
 
-        public static void InsertIntager()
+        public static void InsertInteger()
         {
             Stack<int> stack = new Stack<int>();  
             stack.Push(10);

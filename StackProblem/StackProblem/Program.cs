@@ -37,7 +37,7 @@ namespace StackProblem
                         StackExample.ClearAllStack();
                         break;
                     case 6:
-                        StackExample.InsertIntager();
+                        StackExample.InsertInteger();
                         break;
                     case 0:
                         Console.WriteLine("Exit");
